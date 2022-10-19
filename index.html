@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="body">
+
+    <main class="main">
+        <div class="form-holder">
+            <form class="calculator-form" id="calculator">
+                <select name="rounding" id="rounding" class="form-operation rounding">
+                    <option value="4">Без результирующего округления</option>
+                    <option value="1">Математическое</option>
+                    <option value="2">Бухгалтерское</option>
+                    <option value="3">Усечение</option>
+                </select>
+                <input type="text" name="number" id="number1" placeholder="Введите число..." value="0">
+                <select name="operation" id="operation1" class="form-operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <div class="bracket"></div>
+                <input type="text" name="number" id="number2" placeholder="Введите число..." value="0">
+                <select name="operation" id="operation2" class="form-operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="text" name="number" id="number3" placeholder="Введите число..." value="0">
+                <div class="bracket"></div>
+                <select name="operation" id="operation3" class="form-operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="text" name="number" id="number4" placeholder="Введите число..." value="0">
+            </form>
+            <span class="form-result" id="form-result">
+                Результат
+            </span>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>Русальский Александр Дмитриевич</span>
+        <span>4 курс ФПМИ, 4 группа</span>
+    </footer>
+</body>
+<script src="./bundle.js"></script>
+
+</html>
