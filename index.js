@@ -27,12 +27,14 @@ function doOperation(number1, number2, operation, precision) {
 
 function formatOperationNumber(number) {
     number = number.value;
-    number = number.substring(0, number.split('').findLastIndex(e => e !== '0') + 1);
-    if (number == '') {
-        number = '0';
-    }
-    if (number.charAt(number.length - 1) == '.') {
-        number = number.substring(0, number.length - 1);
+    if (number.indexOf('.') != -1) {
+        number = number.substring(0, number.split('').findLastIndex(e => e !== '0') + 1);
+        if (number == '') {
+            number = '0';
+        }
+        if (number.charAt(number.length - 1) == '.') {
+            number = number.substring(0, number.length - 1);
+        }
     }
     return formatNumber(number);
 }
@@ -87,7 +89,7 @@ function doGlobalOperation() {
             const op24 = doOperation(op23, number4, operation3, 10);
             res = doOperation(number1, op24, operation1, 10);
         }
-        if (roundingModeInt!= 4) res = roundOperation(res, 0, roundingModeInt);
+        if (roundingModeInt != 4) res = roundOperation(res, 0, roundingModeInt);
         else res = roundOperation(res, 6, roundingModeInt)
         result.textContent = formatOperationNumber(res);
     } catch (e) {
